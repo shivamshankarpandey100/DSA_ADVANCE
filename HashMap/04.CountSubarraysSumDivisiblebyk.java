@@ -1,6 +1,7 @@
 //{ Driver Code Starts
 //Initial Template for Java
-
+//https://leetcode.com/problems/subarray-sums-divisible-by-k/submissions/1235521681/
+//https://www.geeksforgeeks.org/problems/sub-array-sum-divisible-by-k2617/1
 
 
 //Initial Template for Java
