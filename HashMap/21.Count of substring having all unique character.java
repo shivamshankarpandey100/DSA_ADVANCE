@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main{
+public class Main21 {
     public static int solution(String str){
         int ans = 0;
         int i = -1;
