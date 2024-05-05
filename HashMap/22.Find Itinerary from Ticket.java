@@ -1,7 +1,7 @@
 import java.util.*;
 
-class Main{
-	public static void main(String[] args) {
+class Main {
+	public static void main (String[] args) {
 		Scanner scn = new Scanner(System.in);
 		int noofpairs_src_des = scn.nextInt();
 		
