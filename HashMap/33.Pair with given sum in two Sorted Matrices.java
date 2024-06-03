@@ -30,7 +30,7 @@ class Main {
 
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Solution 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+// https://www.geeksforgeeks.org/problems/count-pairs-sum-in-matrices4332/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
 
 class Solution {
     int countPairs(int mat1[][], int mat2[][], int n, int x) {
