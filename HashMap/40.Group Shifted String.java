@@ -73,3 +73,51 @@ class Main{
 	}
 
 }
+
+
+// <=================2nd method===================>
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+ 
+public class ShiftedStrings {
+ 
+    public static final int ALPHA = 26;
+ 
+    public static String getDiffString(String str) {
+        String shift = "";
+        for (int i = 1; i < str.length(); i++) {
+            int dif = str.charAt(i) - str.charAt(i - 1);
+            if (dif < 0)
+                dif += ALPHA;
+ 
+            shift += (char)(dif + 'a');
+        }
+        return shift;
+    }
+ 
+    public static void groupShiftedString(String[] str) {
+        Map< String, List<Integer> > groupMap = new HashMap<>();
+        for (int i = 0; i < str.length; i++) {
+            String diffStr = getDiffString(str[i]);
+            List<Integer> indices = groupMap.getOrDefault(diffStr, new ArrayList<>());
+            indices.add(i);
+            groupMap.put(diffStr, indices);
+        }
+ 
+        for (Map.Entry<String, List<Integer>> entry : groupMap.entrySet()) {
+            List<Integer> v = entry.getValue();
+            for (int i = 0; i < v.size(); i++)
+                System.out.print(str[v.get(i)] + " ");
+            System.out.println();
+        }
+    }
+ 
+    public static void main(String[] args) {
+        String[] str = { "acd", "dfg", "wyz", "yab", "mop", "bdfh", "a", "x", "moqs" };
+        groupShiftedString(str);
+    }
+}
+ 
