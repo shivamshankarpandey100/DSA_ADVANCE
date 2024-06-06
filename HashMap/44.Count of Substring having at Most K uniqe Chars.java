@@ -1,7 +1,7 @@
 
 
 import java.util.*;
-class Main41 {
+class Main{
 
 	public static int solution(String str, int k) {
 		int ans = 0;
