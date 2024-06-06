@@ -1,7 +1,7 @@
 
 
 import java.util.*;
-class Main42 {
+class Main{
 
 	public static int solutionfork1(String str){
 
