@@ -11,12 +11,12 @@ class Main{
     int k = scn.nextInt();
     int m = scn.nextInt();
 
-    int bmforON = 1 << i; // bm = bit map
-    System.out.println(n | bmforON);
+    int bmforONi = 1 << i; // bm = bit map
+    System.out.println(n | bmforONi);
 
     int tbm = 1 << j;
-    int bmforOFF = ~tbm;
-    System.out.println(n & bmforOFF);
+    int bmforOFFj = ~tbm;//~ for toggleing
+    System.out.println(n & bmforOFFj);
 
     int bmforToggle = 1 << k;
     System.out.println(n ^ bmforToggle);
