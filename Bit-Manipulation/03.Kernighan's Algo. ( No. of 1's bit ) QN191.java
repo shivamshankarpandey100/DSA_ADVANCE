@@ -1,3 +1,8 @@
+//  https://leetcode.com/problems/number-of-1-bits/description/
+
+//  https://practice.geeksforgeeks.org/problems/set-bits0143/1
+
+
 import java.util.*;
 
 class Main {
