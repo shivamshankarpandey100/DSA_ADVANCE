@@ -8,6 +8,6 @@ class Main{
             xor = xor ^ ele;
         }
        
-       return 2 * xor;
+       return 2 * xor;// return (2<<1);
     }    
 }
