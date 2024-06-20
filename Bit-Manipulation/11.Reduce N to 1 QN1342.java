@@ -26,13 +26,13 @@ class Main {
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   
-//  int step = 0;
-//         while(n != 1){
-//            if((n % 2) == 0) n /= 2;       // 4x + 0
-//            else if(n == 3) n--;          
-//            else if((n % 4) == 1) n--;     // 4x + 1
-//            else if((n % 4) == 3) n++;     // 4x + 3
+ int step = 0;
+        while(n != 1){
+           if((n % 2) == 0) n /= 2;       // 4x + 0
+           else if(n == 3) n--;          
+           else if((n % 4) == 1) n--;     // 4x + 1
+           else if((n % 4) == 3) n++;     // 4x + 3
 
-//            step ++;
-//         }
-//         return step;
+           step ++;
+        }
+        return step;
