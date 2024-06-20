@@ -36,3 +36,28 @@ class Main {
            step ++;
         }
         return step;
+
+
+        ///////////////////////////////////////////////////////////////////////
+//         class Solution{
+
+// 	public int minSteps(int n) 
+// 	{ 
+// 	    // Your code goes here
+// 	   int step = 0;
+//         while(n != 1){
+//            if(n != 0 && ((n & (n - 1)) == 0)){
+//                n/=2;
+//            }
+//            else if((n ^ (n-1)) == 1 ){
+//                n/=3;
+//            }
+//            else if(n != 0 && ((n & (n - 1)) == 0) && (n ^ (n-1))== 1){
+//                n--;
+//            }
+
+//            step ++;
+//         }
+//         return step;
+// }
+// }
