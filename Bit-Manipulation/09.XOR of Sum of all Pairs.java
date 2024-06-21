@@ -11,3 +11,4 @@ class Main{
        return 2 * xor;// return (2<<1);
     }    
 }
+
