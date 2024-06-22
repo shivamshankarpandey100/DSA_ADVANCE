@@ -3,6 +3,20 @@
 //  https://practice.geeksforgeeks.org/problems/copy-set-bits-in-range0623/1
 
 
+//------------------------------GFG------------------------------------------
+
+class Solution {
+    static int setSetBit(int x, int y, int l, int r) {
+        int mask = ((1 << (r - l + 1)) - 1) << (l - 1);
+        
+        int bitsToSet = y & mask;
+        
+        return x | bitsToSet;
+    }
+}
+
+
+
 import java.util.Scanner;
 class Main {
 
