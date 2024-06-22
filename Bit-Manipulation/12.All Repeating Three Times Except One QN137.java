@@ -1,12 +1,11 @@
 
 
 //  https://practice.geeksforgeeks.org/problems/find-element-occuring-once-when-all-other-are-present-thrice/1
-
 //  https://leetcode.com/problems/single-number-ii/description/
 
 
 import java.util.*;
-class Main76 {
+class Main{
 
   public static void main(String[] args){
     Scanner scn = new Scanner(System.in);
@@ -41,7 +40,7 @@ class Main76 {
         tn = tn | csbwtn2;
     }
 
-    System.out.println(tn1);
+    System.out.println(tn1); // return with the data
    
   }
 
