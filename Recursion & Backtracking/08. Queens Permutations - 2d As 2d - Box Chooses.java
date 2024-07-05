@@ -1,8 +1,5 @@
 
 
-//    https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/queens-permutations-2das2d-box-chooses-official/ojquestion
-
-
 import java.io.*;
 class Main{
 
