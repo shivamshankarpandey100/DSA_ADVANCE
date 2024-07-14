@@ -9,21 +9,21 @@ class Main{
 
     }
 
-    String word = words[vidx];
-    for (int i = 0; i < arr.length; i++) {
-      for (int j = 0; j < arr.length; j++) {
+          String word = words[vidx];
+          for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
         if (canPlaceVertically(arr, i, j, word) == true) {
-          boolean[] placed = new boolean[word.length()];
-          placeVertically(arr, i, j, word, placed);
-          solution(arr, words, vidx + 1);
+              boolean[] placed = new boolean[word.length()];
+              placeVertically(arr, i, j, word, placed);
+              solution(arr, words, vidx + 1);
           unPlaceVertically(arr, i, j, placed);
         }
 
         if (canPlaceHorizontally(arr, i, j, word) == true) {
           boolean[] placed = new boolean[word.length()];
-          placeHorizontally(arr, i, j, word, placed);
-          solution(arr, words, vidx + 1);
-          unPlaceHorizontally(arr, i, j, placed);
+                placeHorizontally(arr, i, j, word, placed);
+                solution(arr, words, vidx + 1);
+                unPlaceHorizontally(arr, i, j, placed);
         }
       }
     }
@@ -32,13 +32,13 @@ class Main{
 
   public static boolean canPlaceVertically(char[][] arr, int i, int j, String word){
     for(int k = 0; k < word.length(); k++){
-      if(i + k == arr.length){
-        return false;
-      }else if(arr[i + k][j] == '-' || arr[i + k][j] == word.charAt(k)){
-        continue;
-      }else{
-        return false;
-      }
+                if(i + k == arr.length){
+                  return false;
+                }else if(arr[i + k][j] == '-' || arr[i + k][j] == word.charAt(k)){
+                  continue;
+                }else{
+                  return false;
+                }
     }
 
     return true;
@@ -46,22 +46,22 @@ class Main{
 
   public static void placeVertically(char[][] arr, int i, int j, String word, boolean[] placed){
     for(int k = 0; k < word.length(); k++){
-      if(arr[i + k][j] == '-'){
-        arr[i + k][j] = word.charAt(k);
-        placed[k] = true;
-      }else{
-        placed[k] = false;
-      }
+          if(arr[i + k][j] == '-'){
+            arr[i + k][j] = word.charAt(k);
+            placed[k] = true;
+          }else{
+            placed[k] = false;
+          }
     }
   }
 
-  public static void unPlaceVertically(char[][] arr, int i, int j, boolean[] placed){
-    for(int k = 0; k < placed.length; k++){
-      if(placed[k] == true){
-        arr[i + k][j] = '-';
-      }
-    }
-  }
+                public static void unPlaceVertically(char[][] arr, int i, int j, boolean[] placed){
+                  for(int k = 0; k < placed.length; k++){
+                    if(placed[k] == true){
+                      arr[i + k][j] = '-';
+                    }
+                  }
+                }
 
   public static boolean canPlaceHorizontally(char[][] arr, int i, int j, String word){
     for(int k = 0; k < word.length(); k++){
@@ -104,22 +104,5 @@ class Main{
       System.out.println();
     }
 
-  }
-
-  public static void main(String[] args) {
-    Scanner scn = new Scanner(System.in);
-    char[][] arr = new char[10][10];
-    for (int i = 0; i < arr.length; i++) {
-      String str = scn.next();
-      arr[i] = str.toCharArray();
-    }
-    int n = scn.nextInt();
-    String[] words = new String[n];
-    for (int i = 0; i < words.length; i++) {
-      words[i] = scn.next();
-    }
-    solution(arr, words, 0);
-
-    scn.close();
   }
 }
