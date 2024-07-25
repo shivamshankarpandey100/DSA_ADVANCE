@@ -38,5 +38,4 @@ class Main{
 
     generateWords(0, str, spots, lastOccurence);
   }
-
 }
