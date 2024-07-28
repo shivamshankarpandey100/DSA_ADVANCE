@@ -38,7 +38,6 @@ class Main{
                 solve(arr, vidx + 1, set1, set2, soset1, soset2 + arr[vidx]);
                 set2.remove(set2.size() - 1);
         }
-
     }
 
 }
