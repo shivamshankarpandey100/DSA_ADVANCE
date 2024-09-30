@@ -56,3 +56,24 @@ class Solution2 {
     return ans;
   }
 }
+// ---------------------------------------------------->   3rd and new version   <-------------------------------------------------------
+class Solution {
+    public static void solve(Node root, ArrayList<Integer>list){
+        if(root==null){
+            return;
+        }
+        solve(root.left, list);
+
+        list.add(root.data);
+        
+        solve(root.right, list);
+        
+    }
+    
+    ArrayList<Integer> inOrder(Node root) {
+        // Code
+        ArrayList<Integer>list=new ArrayList<>();
+        solve(root,list);
+        return list;
+    }
+}
