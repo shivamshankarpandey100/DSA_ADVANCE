@@ -68,3 +68,26 @@ class Solution2 {
         return ans;
     }
 }
+
+
+//----------------------------------------------->solution of GFG code <---------------------------------------------------
+class BinaryTree
+{
+    public static void solve(Node root,ArrayList<Integer>ans){
+        if(root==null){
+            return;
+        }
+        
+        ans.add(root.data);
+        solve(root.left , ans);
+        solve(root.right , ans);
+    }
+    
+    static ArrayList<Integer> preorder(Node root)
+    {
+        ArrayList<Integer>ans=new ArrayList<>();
+        solve(root,ans);
+        return ans;
+    }
+
+}
