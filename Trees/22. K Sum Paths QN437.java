@@ -78,7 +78,7 @@ class TreeNode {
         this.right = right;
     }
 }
-class Solution2 {
+class Solution02 {
 
     int count = 0;
     public int pathSum(TreeNode root, int targetSum) {
@@ -112,7 +112,7 @@ class Solution2 {
 
 }
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2nd Approach>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-class Solution3 {
+class Solution03 {
 
     int count = 0;
     public int pathSum(TreeNode root, int targetSum) {
