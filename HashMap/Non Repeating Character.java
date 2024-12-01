@@ -1,15 +1,24 @@
 //https://www.geeksforgeeks.org/problems/non-repeating-character-1587115620/1
 
-class Solution {
-    // Function to find the first non-repeating character in a string.
-    static char nonRepeatingChar(String s) {
-        // Your code here
-        char ch;
-        for(int i=0;i<s.length();i++){
-            ch=s.charAt(i);
-            if(s.lastIndexOf(ch)==s.indexOf(ch))
-            return ch;
+class Solution
+{
+    //Function to find the first non-repeating character in a string.
+    static char nonrepeatingCharacter(String S)
+    {
+        //Your code here
+        Map<Character,Integer> m = new HashMap();
+        int n = S.length();
+        for(int i=0;i<n;i++){
+            char ch = S.charAt(i);
+            m.put(ch,m.getOrDefault(ch,0)+1);
+        }
+        for(int i=0;i<n;i++){
+            char ch = S.charAt(i);
+            if(m.get(ch)==1){
+                return ch;
+            }
         }
         return '$';
+        
     }
 }
