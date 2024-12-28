@@ -1,0 +1,28 @@
+//https://www.geeksforgeeks.org/problems/find-all-triplets-with-zero-sum/1
+
+class Solution {
+    public List<List<Integer>> findTriplets(int[] arr) {
+         HashMap<Integer,ArrayList<Integer>> map=new HashMap<>();
+         List<List<Integer>> ans=new LinkedList<>();
+         for(int i=0;i<arr.length;i++){
+             for(int j=i+1;j<arr.length;j++){
+                 if(map.get(0-(arr[i]+arr[j]))!=null){
+                     for(int k:map.get(0-(arr[i]+arr[j]))){
+                     List<Integer> temp=new LinkedList<>();
+                     temp.add(i);
+                     temp.add(k);
+                     temp.add(j);
+                     ans.add(temp);
+                     }
+                 }
+                if(map.get(arr[j])!=null) map.get(arr[j]).add(j);
+                else {map.put(arr[j],new ArrayList<>());
+                    map.get(arr[j]).add(j);
+                }
+                
+             }
+             map=new HashMap<>();
+         }
+         return ans;
+    }
+}
